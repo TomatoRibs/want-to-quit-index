@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>跑路指数测试 · 一份关于离职意愿的自检</title>
+<title>我想跑路指数 · 一份关于离职意愿的自检</title>
 <meta name="description" content="六组问题，六十个选项，六分钟。量一量你现在有多想跑路。全部计算在浏览器里完成，不联网。">
 <style>
   :root{
@@ -45,7 +45,7 @@
   main{min-width:0;padding:60px 0 96px}
   .margin{position:sticky;top:92px;padding-top:66px;font-size:13px;line-height:1.95;color:var(--ink-3)}
   .margin p{margin:0 0 18px}
-  .margin .mh{font-size:13px;letter-spacing:.08em;margin-bottom:8px}
+  .margin .mh{font-size:12.5px;letter-spacing:.08em;margin-bottom:8px}
 
   /* ---------- 首屏 ---------- */
   .intro{min-height:calc(100vh - 210px);display:flex;flex-direction:column;justify-content:center}
@@ -194,7 +194,7 @@
   .quad .pt{position:absolute;width:9px;height:9px;background:var(--seal);border-radius:50%;transform:translate(-50%,-50%);transition:all .7s cubic-bezier(.2,.7,.2,1)}
   .qt h3{font-family:var(--serif);font-size:20px;font-weight:600;margin:0 0 12px;line-height:1.5}
   .qt p{font-size:15.5px;line-height:1.9;color:var(--ink-2);margin:0;text-wrap:pretty}
-  .qcap{font-size:13px;color:var(--ink-3);margin:11px 0 0;letter-spacing:.02em;line-height:1.7;max-width:220px}
+  .qcap{font-size:12.5px;color:var(--ink-3);margin:11px 0 0;letter-spacing:.02em;line-height:1.7;max-width:220px}
 
   .next{background:var(--ink);color:var(--paper);padding:30px 32px 32px;margin-top:52px}
   .next .k{font-size:12.5px;letter-spacing:.14em;color:#B9AE9E;margin-bottom:16px}
@@ -237,7 +237,7 @@
   details[open] summary{padding-bottom:10px}
   details .ans{font-size:15.5px;line-height:1.92;color:var(--ink-2);padding:0 0 20px;margin:0;text-wrap:pretty}
 
-  .coda{margin-top:70px;padding-top:20px;border-top:1px solid var(--rule);font-size:13.5px;line-height:2;color:var(--ink-3)}
+  .coda{margin-top:70px;padding-top:20px;border-top:1px solid var(--rule);font-size:13px;line-height:2;color:var(--ink-3)}
 
   .fade{animation:fade .5s cubic-bezier(.2,.7,.2,1) both}
   @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
@@ -279,7 +279,7 @@
   <div class="topbar-in">
     <div class="track"><i id="trackFill"></i></div>
     <div class="topbar-row">
-      <span id="barLeft">跑路指数测试</span>
+      <span id="barLeft">我想跑路指数</span>
       <span><b id="barRight"></b></span>
     </div>
   </div>
@@ -530,7 +530,7 @@
     trackFill.style.width = (state.step === 6 ? 100 : Math.round(at / 6 * 100)) + "%";
 
     if (state.step === INTRO) {
-      barLeft.textContent = "跑路指数测试";
+      barLeft.textContent = "我想跑路指数";
       barRight.textContent = "";
       margin.innerHTML = '<p class="mh">这是什么</p><p>不打分排名，不排名次，也不发建议清单。</p>' +
         "<p>它只做一件事：把你已经在感觉、还没说清的东西，写下来。</p>";
@@ -760,7 +760,7 @@
     var h = '<section class="fade">';
 
     h += '<div class="hero">' +
-      '<div class="score"><span class="lab">跑路指数测试</span><b>' + r.index + "</b><span>满分 100</span></div>" +
+      '<div class="score"><span class="lab">我想跑路指数</span><b>' + r.index + "</b><span>满分 100</span></div>" +
       '<div class="hero-r">' +
       '<div class="seal' + (chars.length === 2 ? " two" : "") + '">' +
       chars.map(function (c) { return "<span>" + esc(c) + "</span>"; }).join("") + "</div>" +
@@ -827,7 +827,6 @@
       '<span class="act">' +
       '<button class="btn-quiet" id="copySum">复制摘要</button>' +
       '<button class="btn-quiet" id="copyLink">复制结果链接</button>' +
-      '<button class="btn-quiet" id="saveImg">存图</button>' +
       '<button class="btn-quiet" id="printBtn">打印</button>' +
       '<button class="btn-quiet" id="resetBtn">重新开始</button>' +
       '<span class="hint-msg" id="copied"></span></span></div>';
@@ -843,8 +842,8 @@
     });
 
     document.getElementById("copySum").addEventListener("click", function () {
-      var t = "跑路指数测试 · " + serial + "\n" +
-        "跑路指数测试 " + r.index + " / 100（" + r.level.name + "）\n" +
+      var t = "我想跑路指数 · " + serial + "\n" +
+        "我想跑路指数 " + r.index + " / 100（" + r.level.name + "）\n" +
         "最重的一块：" + r.domains[r.topDomain].name + "，勾了 " + r.domains[r.topDomain].n + " 项\n" +
         "频次 " + r.axes.freq + " · 消耗 " + r.axes.burden + " · 身体与行为 " + r.axes.signal + " · 支持缺口 " + r.axes.iso + "\n" +
         "退路 " + r.prepN + " / 6\n位置：" + q.title;
@@ -854,7 +853,6 @@
       copy(location.href.split("#")[0] + "#r=" + encodeState(), "已复制链接");
     });
     document.getElementById("printBtn").addEventListener("click", function () { window.print(); });
-    document.getElementById("saveImg").addEventListener("click", function () { savePoster(r, q); });
     document.getElementById("resetBtn").addEventListener("click", function () {
       state = { step: INTRO, stage: null, freq: null, support: null, burden: [], signal: [], prep: [] };
       serial = makeSerial();
@@ -895,7 +893,7 @@
     qs.forEach(function (p) {
       h += "<details><summary>" + p[0] + "</summary><p class='ans'>" + p[1] + "</p></details>";
     });
-    h += '<p class="coda">这份东西不是诊断，也不是咨询，更不是标准化心理量表。它没做过信效度检验，不能用来做临床判断。它只把你说不清的感觉，整理成能读的条目。剩下的，慢慢来。</p>';
+    h += '<p class="coda">这份东西不是诊断，也不是咨询。它只把你说不清的感觉，整理成能读的条目。剩下的，慢慢来。</p>';
     return h + "</section>";
   }
 
@@ -915,76 +913,6 @@
     document.body.appendChild(ta); ta.select();
     try { document.execCommand("copy"); done(); } catch (e) { window.prompt("手动复制：", text); }
     document.body.removeChild(ta);
-  }
-
-  /* ==================== 结果存图（Canvas 竖版海报） ==================== */
-  function savePoster(r, q) {
-    var W = 720, H = 1080, pad = 56;
-    var cv = document.createElement("canvas");
-    cv.width = W; cv.height = H;
-    var x = cv.getContext("2d");
-    var serif = '"Songti SC","STSong","Source Han Serif SC","Noto Serif SC",serif';
-    var sans = '-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif';
-
-    x.fillStyle = "#FAF7F1"; x.fillRect(0, 0, W, H);
-    x.strokeStyle = "#DFD6C7"; x.lineWidth = 2; x.strokeRect(pad / 2, pad / 2, W - pad, H - pad);
-
-    x.textAlign = "center";
-    x.fillStyle = "#9E3B26";
-    x.font = "600 22px " + serif;
-    x.fillText("我 想 跑 路 指 数", W / 2, 92);
-
-    x.fillStyle = "#17140F";
-    x.font = "600 200px " + serif;
-    x.textBaseline = "alphabetic";
-    x.fillText(String(r.index), W / 2, 296);
-
-    x.fillStyle = "#6E655A";
-    x.font = "400 20px " + sans;
-    x.fillText("满分 100 · " + r.level.name, W / 2, 344);
-
-    x.strokeStyle = "#DFD6C7"; x.lineWidth = 1;
-    x.beginPath(); x.moveTo(pad, 398); x.lineTo(W - pad, 398); x.stroke();
-
-    var metrics = [
-      ["想跑路的频次", r.axes.freq],
-      ["消耗总量", r.axes.burden],
-      ["身体与行为", r.axes.signal],
-      ["支持缺口", r.axes.iso]
-    ];
-    var my = 452, rowH = 54, barX = pad + 152, barW = W - pad - (pad + 152) - 72;
-    x.textBaseline = "middle";
-    metrics.forEach(function (m, i) {
-      var y = my + i * rowH;
-      x.textAlign = "left"; x.fillStyle = "#4A4238";
-      x.font = "400 20px " + sans; x.fillText(m[0], pad, y);
-      x.fillStyle = "#EBE4D8"; x.fillRect(barX, y - 5, barW, 10);
-      x.fillStyle = "#17140F"; x.fillRect(barX, y - 5, barW * m[1] / 100, 10);
-      x.textAlign = "right"; x.fillStyle = "#17140F";
-      x.font = "600 22px " + serif; x.fillText(String(m[1]), W - pad, y);
-    });
-
-    var dy = my + 4 * rowH + 10;
-    x.strokeStyle = "#DFD6C7"; x.lineWidth = 1;
-    x.beginPath(); x.moveTo(pad, dy); x.lineTo(W - pad, dy); x.stroke();
-    x.textAlign = "left"; x.fillStyle = "#4A4238"; x.font = "400 19px " + sans;
-    x.fillText("退路 " + r.prepN + " / 6", pad, dy + 36);
-    x.fillText("落在：" + q.title, pad, dy + 70);
-
-    x.fillStyle = "#9E3B26"; x.font = "400 18px " + sans;
-    x.fillText("测一测你自己的跑路指数", pad, H - 112);
-    x.fillStyle = "#6E655A"; x.font = "400 16px " + sans;
-    x.fillText(serial + "  ·  " + fmtDate(), pad, H - 80);
-    x.fillText("答案只在你这台电脑，分享靠你发出的链接", pad, H - 54);
-
-    try {
-      var url = cv.toDataURL("image/png");
-      var a = document.createElement("a");
-      a.href = url; a.download = "跑路指数测试_" + r.index + "_" + serial + ".png";
-      document.body.appendChild(a); a.click(); document.body.removeChild(a);
-      var c = document.getElementById("copied");
-      if (c) { c.textContent = "已存图"; setTimeout(function () { c.textContent = ""; }, 2600); }
-    } catch (e) { window.prompt("手动保存图片：", cv.toDataURL("image/png")); }
   }
 
   /* ==================== 链接编解码 ==================== */
