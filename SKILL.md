@@ -1,10 +1,10 @@
 ---
-name: 我想跑路指数测试
-display_name: 我想跑路指数测试
-display_name_en: Want-to-Quit Index Test
-description: 生成可离线打开的「我想跑路指数」离职意愿自测网页：6 组 60 题、30 秒静心仪式、四维消耗加双轴四象限判读，单文件、数据不出本机。当用户说想做离职自测或生成测评网页时触发。
-description_zh: 一句话生成「我想跑路指数」离职意愿自测网页。含 6 组 60 题、30 秒静心仪式、四维消耗与双轴四象限判读，单文件 HTML 离线可用，全部计算在浏览器本地完成，不联网、不上传。
-description_en: Generate an offline single-file "Want-to-Quit Index" self-assessment for leave-intent. 6 groups / 60 items, a 30s calming ritual, 4 metrics and a 2-axis quadrant readout. All computation runs locally in the browser; nothing is uploaded.
+name: 跑路指数测试
+display_name: 跑路指数测试
+display_name_en: Runaway Index Test
+description: 生成可离线打开的「跑路指数测试」离职意愿自测网页：6 组 60 题、30 秒静心仪式、四维消耗加双轴四象限判读，单文件、数据不出本机。当用户说想做离职自测或生成测评网页时触发。
+description_zh: 一句话生成「跑路指数测试」离职意愿自测网页。含 6 组 60 题、30 秒静心仪式、四维消耗与双轴四象限判读，单文件 HTML 离线可用，全部计算在浏览器本地完成，不联网、不上传。
+description_en: Generate an offline single-file "Runaway Index Test" self-assessment for leave-intent. 6 groups / 60 items, a 30s calming ritual, 4 metrics and a 2-axis quadrant readout. All computation runs locally in the browser; nothing is uploaded.
 category: productivity
 version: 1.0.0
 author: 番茄排骨
@@ -19,7 +19,7 @@ allowed-tools:
   - present_files
 ---
 
-# 我想跑路指数测试
+# 跑路指数测试
 
 一份关于「现在有多想走」的自评工具。把它装好之后，用户说想做这个测评，你就帮他们在当前工作区生成网页，他们打开就能用。
 
@@ -41,7 +41,7 @@ allowed-tools:
 
 ## 工作流程
 
-1. **确认意图与落点**。问清楚：生成到当前工作区（默认），文件名用 `我想跑路指数.html`；还是用户另有指定。
+1. **确认意图与落点**。问清楚：生成到当前工作区（默认），文件名用 `跑路指数测试.html`；还是用户另有指定。
 2. **复制素材**。把本目录下的 `assets/quiz.html` 写到用户工作区：
    - 用 Read 读取 `{{SKILL_DIR}}/assets/quiz.html`，再用 Write 写到目标路径（保持单文件、零外部依赖）。
 3. **打开预览**。用 present_files 把生成的 HTML 弹出预览，告诉用户：双击文件即可离线打开，关掉页面数据就没了。
@@ -59,4 +59,4 @@ allowed-tools:
 ## 文件
 
 - `assets/quiz.html`：完整单文件测评，直接复制到用户工作区即可。
-- 设计方法与文案改写对照见原项目工作区 `去留自检/02_方法论与宣传口径.md`、`03_文案改写对照.md`（仅参考，不随本 Skill 分发）。
+- 方法论与宣传口径为内部资料，不随本 Skill 分发。
