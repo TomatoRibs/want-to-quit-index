@@ -22,7 +22,7 @@
 方式二（手动安装）：
 
 ```bash
-bash scripts/install_local.sh /path/to/跑路指数测试
+bash scripts/install_local.sh /path/to/want-to-quit-index
 ```
 
 ## 使用

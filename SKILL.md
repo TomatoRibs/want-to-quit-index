@@ -1,5 +1,5 @@
 ---
-name: 跑路指数测试
+name: want-to-quit-index
 display_name: 跑路指数测试
 display_name_en: Runaway Index Test
 description: 生成可离线打开的「跑路指数测试」离职意愿自测网页：6 组 60 题、30 秒静心仪式、四维消耗加双轴四象限判读，单文件、数据不出本机。当用户说想做离职自测或生成测评网页时触发。
