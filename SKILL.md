@@ -42,8 +42,8 @@ allowed-tools:
 ## 工作流程
 
 1. **确认意图与落点**。问清楚：生成到当前工作区（默认），文件名用 `跑路指数测试.html`；还是用户另有指定。
-2. **复制素材**。把本目录下的 `assets/quiz.html` 写到用户工作区：
-   - 用 Read 读取 `{{SKILL_DIR}}/assets/quiz.html`，再用 Write 写到目标路径（保持单文件、零外部依赖）。
+2. **复制素材**。把本目录下的 `assets/want-to-quit-index.html` 写到用户工作区：
+   - 用 Read 读取 `{{SKILL_DIR}}/assets/want-to-quit-index.html`，再用 Write 写到目标路径（保持单文件、零外部依赖）。
 3. **打开预览**。用 present_files 把生成的 HTML 弹出预览，告诉用户：双击文件即可离线打开，关掉页面数据就没了。
 4. **按需改造**（可选）。用户要改题、改配色、改文案时，直接编辑那份 HTML：
    - 题目在 `<script>` 里的 `QUESTIONS` / 各分组数组；
@@ -58,5 +58,5 @@ allowed-tools:
 
 ## 文件
 
-- `assets/quiz.html`：完整单文件测评，直接复制到用户工作区即可。
+- `assets/want-to-quit-index.html`：完整单文件测评，直接复制到用户工作区即可。
 - 方法论与宣传口径为内部资料，不随本 Skill 分发。
