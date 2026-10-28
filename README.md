@@ -5,7 +5,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](./LICENSE) [![Single File HTML](https://img.shields.io/badge/Single--File-HTML-orange.svg)](./assets/want-to-quit-index.html) [![WorkBuddy Skill](https://img.shields.io/badge/WorkBuddy-Skill-purple.svg)](./SKILL.md)
 
-**🔗 [在线体验 →](https://tomatoribs.github.io/want-to-quit-index/)**（点开就玩 · 免安装 · 免注册）
+**这是一个 WorkBuddy 技能**——下载装好后，一句话就能生成或重做这一份。只想先看看效果，也可以只打开网页版。
 
 ![跑路指数测试首屏](./assets/preview.png)
 
@@ -14,6 +14,28 @@
 想跑路的理由，大多数人说不出。它散在几十个瞬间里：周三晚上十一点还在响的群，周日午后突然沉下去的那阵心情，刷招聘软件时手指停住的那一秒。这份测评把它们收成六组，一件一件勾出来，算成一个能看的读数。
 
 **60 个选项 · 6 步 · 6 分钟 · 0 上传**
+
+## 怎么装
+
+**方式一：装成 WorkBuddy 技能（推荐）**
+
+下载本仓库（右上角 `Code → Download ZIP`，或用 git），然后在解压出来的目录里执行：
+
+```bash
+git clone https://github.com/TomatoRibs/want-to-quit-index.git
+cd want-to-quit-index
+bash scripts/install_local.sh
+```
+
+装好后技能进入 `~/.workbuddy/skills/want-to-quit-index/`，回到 WorkBuddy 直接说话即可。
+
+WorkBuddy 是一个本地 AI 助手；装成技能后，一句话触发：「生成一份跑路指数测试网页，要带可以跳过的呼吸动画」。
+
+**方式二：只想打开网页版**
+
+1. 双击 `assets/want-to-quit-index.html`——无需联网、无需服务器、无需安装，手机浏览器可直接打开。
+2. 呼吸动画后开始，逐组勾选，约 6 分钟。
+3. 看报告，复制链接、存图或打印带走。
 
 ## 你会测出什么
 
@@ -33,12 +55,6 @@
 - 🧭 **压力 × 退路交叉落点**——读数交叉出你在哪一档，而不是一句空泛的「想走」
 - 🧾 **单据式报告**——可复制文本摘要、复制结果链接、一键存图、打印成 PDF
 - 🔒 **0 上传**——计算都在这台电脑里跑，没有服务器，也不联网
-
-## 怎么用
-
-1. 双击 `assets/want-to-quit-index.html`——无需联网、无需服务器、无需安装，手机浏览器可直接打开。
-2. 呼吸动画后开始，逐组勾选，约 6 分钟。
-3. 看报告，复制链接、存图或打印带走。
 
 ## 隐私
 
@@ -62,14 +78,6 @@
 ## 为什么做这个
 
 说不清有多想走的时候，数字比决心先用得上。它不替你做决定，只把那团模糊的情绪拆成几条能看的数字——看清了，动不动都是你自己的事。
-
-## 装成 WorkBuddy 技能（可选）
-
-```bash
-bash scripts/install_local.sh .
-```
-
-WorkBuddy 是一个本地 AI 助手；装成技能后，一句话触发：「生成一份跑路指数测试网页，要带可以跳过的呼吸动画」。
 
 ## 免责声明
 
